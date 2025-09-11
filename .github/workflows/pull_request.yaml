@@ -1,0 +1,61 @@
+name: 🤖 CI Pull Request
+on:
+  pull_request:
+
+jobs:
+  lint-and-format:
+    name: 👕 Lint and format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check formatting
+        run: yarn format
+
+      - name: Check linting
+        run: yarn lint
+
+  lint-commits:
+    name: 📝 Lint Commit Messages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check formatting
+        run: yarn lint:commits
+
+  test:
+    name: 🧪 Execute Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+  build-check:
+    name: 🏗️ Build Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Init env
+        run: yarn install
+
+      - name: Type check
+        run: yarn build
