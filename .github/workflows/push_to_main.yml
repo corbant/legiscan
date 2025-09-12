@@ -1,8 +1,8 @@
-name: 🤖 Push to typescript
+name: 🤖 Push to main
 on:
   push:
     branches:
-      - typescript
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
