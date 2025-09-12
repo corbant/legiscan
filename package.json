@@ -21,7 +21,7 @@
   "scripts": {
     "build": "unbuild",
     "lint": "eslint . --ext .ts",
-    "format": "prettier --write './*.{ts,json,md,yml,yaml}'",
+    "format": "prettier './*.{ts,json,md,yml,yaml}' --check",
     "lint:commits": "commitlint --last --verbose",
     "release": "release-it",
     "test": "jest",
