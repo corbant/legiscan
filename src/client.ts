@@ -45,7 +45,7 @@ export class LegiScanClient {
   private apiKey: string;
   private baseUrl: string;
 
-  constructor({ apiKey = process.env['LEGISCAN_API_KEY'] }: LegiScanClientConfig) {
+  constructor({ apiKey = process.env['LEGISCAN_API_KEY'] }: LegiScanClientConfig = {}) {
     if (!apiKey) {
       throw new LegiScanSdkError('API key is required');
     }
