@@ -181,7 +181,7 @@ export class LegiScanClient {
     }>({ op: Operation.getSearchRaw, query, ...params });
     return {
       summary: searchResult.summary,
-      results: indexedObjectToArray(searchResult.results),
+      results: searchResult.results,
     };
   }
 
