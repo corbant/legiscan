@@ -1,6 +1,6 @@
 {
   "name": "@just-buidl-it/legiscan",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "TypeScript SDK for the Legiscan API",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",

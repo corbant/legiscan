@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.0](https://github.com/just-buidl-it/legiscan/compare/0.2.0...0.3.0) (2025-09-12)
+
+### Features
+
+* export types and schemas ([4f2aa29](https://github.com/just-buidl-it/legiscan/commit/4f2aa29f822afca901c4be165e90b6b88cb2d961))
+
 ## [0.2.0](https://github.com/just-buidl-it/legiscan/compare/0.1.0...0.2.0) (2025-09-12)
 
 ### Features
