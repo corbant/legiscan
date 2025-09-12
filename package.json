@@ -20,8 +20,8 @@
   },
   "scripts": {
     "build": "unbuild",
-    "lint": "eslint . --ext .ts",
-    "format": "prettier './*.{ts,json,md,yml,yaml}' --check",
+    "lint": "eslint . --ext .ts,.js",
+    "format": "prettier './**/*.{ts,js,json,md,yml,yaml}' --check",
     "lint:commits": "commitlint --last --verbose",
     "release": "release-it",
     "test": "jest",

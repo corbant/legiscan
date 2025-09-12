@@ -16,6 +16,19 @@ export default defineConfig([
     ignores: ['dist/**', 'dist/**/*.d.ts'],
   },
   {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.commonjs,
+        ...globals.node,
+      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
+    extends: compat.extends('eslint:recommended'),
+  },
+  {
+    files: ['**/*.ts'],
     languageOptions: {
       globals: {
         ...globals.commonjs,
