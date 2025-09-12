@@ -23,9 +23,7 @@ import {
   SessionStandardizeSchema,
   SessionSummaryStandardizeSchema,
 } from './schemas/session';
-import {
-  MasterListRawStandardizeSchema,
-} from './schemas/master-list';
+import { MasterListRawStandardizeSchema } from './schemas/master-list';
 import { StateId } from './schemas/constants';
 import { z } from 'zod/v4';
 
