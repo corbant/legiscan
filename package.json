@@ -16,6 +16,11 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
+    },
+    "./schemas/*": {
+      "require": "./dist/schemas/*.cjs",
+      "import": "./dist/schemas/*.mjs",
+      "types": "./dist/schemas/*.d.ts"
     }
   },
   "scripts": {
