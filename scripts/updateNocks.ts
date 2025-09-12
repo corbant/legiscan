@@ -2,7 +2,7 @@ import nock from 'nock';
 import fs from 'fs';
 import path from 'path';
 import { LegiScanClient } from '../src/client';
-import { State, StateId } from '../src/schemas/constants';
+import { StateId } from '../src/schemas/constants';
 
 const fixturesDir = path.join(__dirname, '..', 'fixtures');
 const fixturePath = path.join(fixturesDir, 'nock.json');
