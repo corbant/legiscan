@@ -1,5 +1,5 @@
 import { z } from 'zod/v4';
-import { Vote } from './constants';
+import { Chamber, Vote } from './constants';
 import camelize from 'camelize-ts';
 
 export const VoteItemSchema = z.object({
@@ -19,7 +19,7 @@ export const RollCallSchema = z.object({
   absent: z.number(),
   total: z.number(),
   passed: z.number(),
-  chamber: z.string(),
+  chamber: z.enum(Chamber),
   chamber_id: z.number(),
   votes: z.array(VoteItemSchema),
 });

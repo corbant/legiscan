@@ -9,6 +9,7 @@ import {
   Party,
   Role,
   TextType,
+  Chamber,
 } from './constants';
 
 export const BillSchema = z.strictObject({
@@ -54,7 +55,7 @@ export const BillSchema = z.strictObject({
   committee: z.array(
     z.object({
       committeeId: z.number(),
-      chamber: z.string(),
+      chamber: z.enum(Chamber),
       chamber_id: z.number(),
       name: z.string(),
     }),
@@ -63,7 +64,7 @@ export const BillSchema = z.strictObject({
     z.object({
       date: z.iso.date(),
       committee_id: z.number(),
-      chamber: z.string(),
+      chamber: z.enum(Chamber),
       chamber_id: z.number(),
       name: z.string(),
     }),
@@ -72,7 +73,7 @@ export const BillSchema = z.strictObject({
     z.object({
       date: z.iso.date(),
       action: z.string(),
-      chamber: z.string(),
+      chamber: z.enum(Chamber),
       chamber_id: z.number(),
       importance: z.number(),
     }),
@@ -142,7 +143,7 @@ export const BillSchema = z.strictObject({
       absent: z.number(),
       total: z.number(),
       passed: z.number(),
-      chamber: z.string(),
+      chamber: z.enum(Chamber),
       chamber_id: z.number(),
       url: z.url(),
       state_link: z.url(),
@@ -152,7 +153,7 @@ export const BillSchema = z.strictObject({
     z.object({
       amendment_id: z.number(),
       adopted: z.number(),
-      chamber: z.string(),
+      chamber: z.enum(Chamber),
       chamber_id: z.number(),
       date: z.iso.date(),
       title: z.string(),
