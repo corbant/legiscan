@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.0](https://github.com/just-buidl-it/legiscan/compare/0.3.0...0.4.0) (2025-09-16)
+
+### Features
+
+* add chamber enum ([a1b0053](https://github.com/just-buidl-it/legiscan/commit/a1b00532a51a98ae22b56a9ae1eb100679f6b9f2))
+
 ## [0.3.0](https://github.com/just-buidl-it/legiscan/compare/0.2.0...0.3.0) (2025-09-12)
 
 ### Features
