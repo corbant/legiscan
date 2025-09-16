@@ -66,6 +66,13 @@ export enum Role {
   JointConference,
 }
 
+export enum Chamber {
+  House = 'H',
+  Senate = 'S',
+  Assembly = 'A',
+  None = '',
+}
+
 export enum Body {
   House = 1,
   Senate,

@@ -1,9 +1,10 @@
 import { z } from 'zod/v4';
 import camelize from 'camelize-ts';
+import { Chamber } from './constants';
 
 export const AmendmentSchema = z.object({
   amendment_id: z.number(),
-  chamber: z.string(),
+  chamber: z.enum(Chamber),
   chamber_id: z.number(),
   bill_id: z.number(),
   adopted: z.number(),
