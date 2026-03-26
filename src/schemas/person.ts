@@ -3,6 +3,17 @@ import { StateId, Party, Role } from './constants';
 import camelize from 'camelize-ts';
 import { SessionSchema } from './session';
 
+const LinksSchema = z.object({
+  bluesky: z.string(),
+  facebook: z.string(),
+  instagram: z.string(),
+  linkedin: z.string(),
+  tiktok: z.string(),
+  twitter: z.string(),
+  website: z.string(),
+  youtube: z.string(),
+});
+
 export const PersonSchema = z.object({
   people_id: z.number(),
   person_hash: z.string(),
@@ -23,8 +34,38 @@ export const PersonSchema = z.object({
   opensecrets_id: z.string(),
   knowwho_pid: z.number(),
   ballotpedia: z.string(),
+  bioguide_id: z.string(),
   committee_sponsor: z.number(),
   committee_id: z.number(),
+  state_federal: z.number(),
+  bio: z.preprocess(
+    (val) => (Array.isArray(val) && val.length === 0 ? undefined : val), // When there is no bio, API returns an empty array
+    z
+      .object({
+        social: z.object({
+          capitol_phone: z.string(),
+          district_phone: z.string(),
+          email: z.string(),
+          webmail: z.string(),
+          biography: z.string(),
+          image: z.string(),
+          ballotpedia: z.string(),
+          votesmart: z.string(),
+        }),
+        capitol_address: z.object({
+          address1: z.string(),
+          address2: z.string(),
+          city: z.string(),
+          state: z.string(),
+          zip: z.string(),
+        }),
+        links: z.object({
+          official: LinksSchema,
+          personal: LinksSchema,
+        }),
+      })
+      .optional(),
+  ),
 });
 
 export const SessionPeopleSchema = z.object({

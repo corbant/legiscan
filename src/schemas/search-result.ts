@@ -8,6 +8,7 @@ export const SearchSummarySchema = z.object({
   count: z.number(),
   page_current: z.number(),
   page_total: z.number(),
+  query: z.string(),
 });
 
 export const SearchResultItemSchema = z.object({
