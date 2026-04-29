@@ -1,6 +1,6 @@
 import { LegiScanSdkError, LegiScanApiError } from './utils/error';
 import type { Session } from './schemas/session';
-import { StateId } from './schemas/constants';
+import { State, StateId } from './schemas/constants';
 import type { MasterList, MasterListRaw } from './schemas/master-list';
 import type { Bill, BillText } from './schemas/bill';
 import type { Amendment } from './schemas/amendment';
@@ -73,7 +73,7 @@ export class LegiScanClient {
     return data;
   }
 
-  async getSessionList(state: StateId) {
+  async getSessionList(state: State) {
     const { sessions } = await this.get<{ sessions: Session[] }>({
       op: Operation.getSessionList,
       state,
