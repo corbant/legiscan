@@ -1,20 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "target": "ES6",
-    "module": "ES2022",
-    "sourceMap": true,
     "declaration": true,
-    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist/types",
+    "rootDir": "src",
+    "target": "es2020",
+    "module": "nodenext",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node", "jest"]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/*.test.ts"]
 }

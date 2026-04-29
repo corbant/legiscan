@@ -20,6 +20,8 @@ The LegiScan API limits has a rate limit of 30,000 requests per month which rese
 
 Lists are returned as objects with the indexes as keys. These "list" objects can also contain other keys. The known "string" keys are pulled off and the object is flattened to an array. The responses are not otherwise modified.
 
+If a person object does not have a bio, it is returned as an empty array. This is changed to simply be undefined instead.
+
 Zod schemas are made available to cast keys from snake case to camel case and to cast values to easier to work with types.
 
 - 0,1 values are cast to booleans

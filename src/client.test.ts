@@ -24,7 +24,7 @@ import {
   SessionSummaryStandardizeSchema,
 } from './schemas/session';
 import { MasterListRawStandardizeSchema } from './schemas/master-list';
-import { StateId } from './schemas/constants';
+import { State, StateId } from './schemas/constants';
 import { z } from 'zod/v4';
 
 const API_KEY = process.env['LEGISCAN_API_KEY'] || 'TEST_KEY';
@@ -38,7 +38,7 @@ describe('LegiScanClient Tests', () => {
 
   describe('getSessionList', () => {
     it('should return sessions for a state', async () => {
-      const sessions = await client.getSessionList(StateId.CA);
+      const sessions = await client.getSessionList(State.California);
       expect(z.array(SessionSummaryStandardizeSchema).parse(sessions));
     });
   });

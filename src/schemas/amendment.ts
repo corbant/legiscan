@@ -16,6 +16,15 @@ export const AmendmentSchema = z.object({
   amendment_size: z.number(),
   amendment_hash: z.string(),
   doc: z.string(),
+  url: z.string(),
+  state_link: z.string(),
+  alt_amendment: z.number(),
+  alt_mime: z.string(),
+  alt_mime_id: z.number(),
+  alt_state_link: z.string(),
+  alt_amendment_size: z.number(),
+  alt_amendment_hash: z.string(),
+  alt_doc: z.string(),
 });
 
 export const AmendmentStandardizeSchema = AmendmentSchema.extend({
