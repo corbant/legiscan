@@ -9,8 +9,7 @@
     "node": ">=20"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "exports": {
     ".": {

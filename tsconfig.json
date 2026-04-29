@@ -8,8 +8,6 @@
     "module": "nodenext",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "types": ["node", "jest"]
   },
   "include": ["src/**/*"],
